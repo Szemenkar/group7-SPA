@@ -21,31 +21,13 @@ const ArticleList = () => {
   };
 
   return (
-    <div style={{color: 'black'}}>
-      <h1>Articles.</h1>
-
-      {/* Sorting Menu */}
-      <div>
-        <label>Sort by: </label>
-        <select value={sortBy} onChange={handleSortChange}>
-          <option value="newest">Newest</option>
-          <option value="oldest">Oldest</option>
-        </select>
-      </div>
-
-      {/* Display Articles */}
-
+    <div class="card">
         {articles.map((article) => (
-            <div class="card">
                     <div class="card-body">
                         <h2 class="card-title">{article.title}</h2>
                         <p class="card-text">{article.summary}</p>
-                        <p class="card-published">{article.published}</p>
-                        <a href={article.link}>Read more</a>
                     </div>
-            </div>
         ))}
-
     </div>
   );
 };

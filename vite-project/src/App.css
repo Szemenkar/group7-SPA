@@ -2,7 +2,6 @@
     font-family:Arial, Helvetica, sans-serif;
     margin-bottom: 60px;
     background-image: url("images/bg.jpg");
-    color: rgba(255, 255, 255);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -10,8 +9,9 @@
   }
 
   .container {
+  
     text-align: center;
-    background-color: rgb(255, 255, 255);
+    background-color: transparent;
     padding: 20px;
     border-radius: 20px;
   }
@@ -21,11 +21,25 @@
   }
 
   .card {
+  color: black;
+
+  }
+
+  .card-body{
+    color: rgb(72, 72, 72);
+    overflow: hidden !important;
+    /*width: 275px;*/
+    text-align: center;
+
+    justify-content: center;  /* Center the text vertically */
     background-color: rgba(255, 255, 255, 0.7);
-    height: 255px;
-    width: 255px;
-    margin: 10 px;
-    padding: 15px;
+    height: 270px;
+    width: 270px;
+    margin: 10px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-right: 15px;
+    padding-left: 15px;
     border-radius: 0px;
     display: inline-block;
   }

@@ -34,6 +34,34 @@ const port = 3000;
         published: new Date(Date.now() - 172800000), 
         topic: ["Ekonomi"] 
     },
+    {
+      title: "Inte klart med ersättare för Ribbenvik", 
+      summary: "▸ Regeringen och SD har ännu inte hittat någon ersättare för Migrationsverkets avgående generaldirektör Mikael Ribbenvik.", 
+      link: "https://www.aftonbladet.se/nyheter/a/8JWWL2/inte-klart-med-ersattare-for-ribbenvik", 
+      published: new Date(Date.now() - 86400000), 
+      topic: ["SamhalleKonflikter"] 
+  },
+  {
+      title: "Drogs in i inhägnad – dödades av 40 krokodiler", 
+      summary: "▸ En 72-årig man har dödats av omkring 40 krokodiler sedan han dragits in i en inhägnad på familjens reptilfarm.", 
+      link: "https://www.aftonbladet.se/nyheter/a/bgWW6e/drogs-in-i-inhagnad-dodades-av-40-krokodiler", 
+      published: new Date(Date.now() - 172800000), 
+      topic: ["Ekonomi"] 
+  },
+  {
+    title: "Inte klart med ersättare för Ribbenvik", 
+    summary: "▸ Regeringen och SD har ännu inte hittat någon ersättare för Migrationsverkets avgående generaldirektör Mikael Ribbenvik.", 
+    link: "https://www.aftonbladet.se/nyheter/a/8JWWL2/inte-klart-med-ersattare-for-ribbenvik", 
+    published: new Date(Date.now() - 86400000), 
+    topic: ["SamhalleKonflikter"] 
+},
+{
+    title: "Drogs in i inhägnad – dödades av 40 krokodiler", 
+    summary: "▸ En 72-årig man har dödats av omkring 40 krokodiler sedan han dragits in i en inhägnad på familjens reptilfarm.", 
+    link: "https://www.aftonbladet.se/nyheter/a/bgWW6e/drogs-in-i-inhagnad-dodades-av-40-krokodiler", 
+    published: new Date(Date.now() - 172800000), 
+    topic: ["Ekonomi"] 
+},
    ];
 
    app.get('/api/articles', (req, res) => {
