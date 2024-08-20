@@ -23,10 +23,10 @@ const ArticleList = () => {
   return (
     <div class="card">
         {articles.map((article) => (
-                    <div class="card-body">
-                        <h2 class="card-title">{article.title}</h2>
-                        <p class="card-text">{article.summary}</p>
-                    </div>
+          <div className="card-body">
+            <h2 className="card-title">{article.title}</h2>
+            <p className="card-text">{article.summary}</p>
+          </div>
         ))}
     </div>
   );

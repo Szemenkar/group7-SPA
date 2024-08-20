@@ -13,11 +13,40 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.abril-fatface-regular {
+  font-family: "Abril Fatface", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.outfit-regular {
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+h1 {
+  font-family: "Abril Fatface", serif;
+  font-size: 45pt;
+}
+
+h5 {
+  font-family: "Outfit", sans-serif;
+  font-size: 15pt;
+}
+
+p {
+  font-family: "Outfit", sans-serif;
+  font-size: 12pt;
+}
+
 a {
   font-weight: 500;
   color: #646cff;
   text-decoration: inherit;
 }
+
 a:hover {
   color: #535bf2;
 }
@@ -28,9 +57,6 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+  font-family: "Outfit", sans-serif;
+  color: white !important;
 }
