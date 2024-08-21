@@ -1,47 +1,44 @@
 import React, { useEffect, useState } from 'react';
-import React from "react";
-import { Link } from "react-router-dom";
+import '../components/Filterbar.css';
 
 const Navbar = () => {
   const [prevScrollPos, setPrevScrollPos] = useState(window.scrollY);
   const [menuStyle, setMenuStyle] = useState({});
-  const headerHeight = document.querySelector('header').offsetHeight; // Höjden på headern
+  const isIndexPage = window.location.pathname === '/';
 
   useEffect(() => {
+    const headerHeight = document.querySelector('header').offsetHeight;
+
     const handleScroll = () => {
       const currentScrollPos = window.scrollY;
       const scrollUp = currentScrollPos - prevScrollPos;
 
       if (currentScrollPos > headerHeight) {
-        // Scrollat förbi headern
         setMenuStyle({
           position: 'fixed',
           top: '0',
           opacity: '0',
         });
         if (scrollUp < 0) {
-          // Scrollar uppåt
           setMenuStyle({
             position: 'fixed',
             top: '0',
             opacity: '1',
-            /*background: 'linear-gradient(to bottom, #FB7E7E, #ba85e9, rgba(186, 133, 233, 0.7))',*/
             background: 'rgba(247, 57, 162, 0.7)',
             marginTop: '0',
           });
         }
       } else {
-        // Om användaren är ovanför headern
         setMenuStyle({
           position: 'fixed',
           top: `${headerHeight}px`,
           opacity: '1',
           background: 'transparent',
-          marginTop: '15px',
+          marginTop: '20px',
         });
       }
 
-      setPrevScrollPos(currentScrollPos); // Uppdaterar positionen
+      setPrevScrollPos(currentScrollPos);
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -55,9 +52,28 @@ const Navbar = () => {
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, [prevScrollPos, headerHeight]);
+  }, [prevScrollPos]);
 
-  return <div className="menu" style={menuStyle}>Menu</div>;
+  return (
+    <div>
+      {isIndexPage && (
+        <div className="menu-wrapper">
+          <div className="menu" style={menuStyle}>
+            <ul className="menu-list">
+              <li>Ekonomi</li>
+              <li>Hälsa</li>
+              <li>Idrott</li>
+              <li>Livsstil och Fritid</li>
+              <li>Miljö</li>
+              <li>Religion</li>
+              <li>Samhälle och Konflikter</li>
+              <li>Vetenskap och Teknik</li>
+            </ul>
+          </div>
+        </div>
+      )}
+    </div>
+  );
 };
 
 export default Navbar;

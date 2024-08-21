@@ -1,0 +1,26 @@
+.menu-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 100px;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu-list {
+  list-style-type: none;
+  padding: 0px;
+  margin: 0px;
+  display: flex;
+  justify-content: center;
+}
+
+.menu-list li {
+  margin: 0 8px;
+  display: flex;
+  justify-content: center;
+}

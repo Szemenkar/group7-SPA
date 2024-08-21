@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
+
 const ArticleList = () => {
   const [articles, setArticles] = useState([]);
   const [sortBy, setSortBy] = useState('newest'); // Default sorting option
@@ -22,12 +23,12 @@ const ArticleList = () => {
 
   return (
     <div class="card">
-        {articles.map((article) => (
-                    <div class="card-body">
-                        <h2 class="card-title">{article.title}</h2>
-                        <p class="card-text">{article.summary}</p>
-                    </div>
-        ))}
+      {articles.map((article) => (
+        <div class="card-body">
+          <h2 class="card-title">{article.title}</h2>
+          <p class="card-text">{article.summary}</p>
+        </div>
+      ))}
     </div>
   );
 };
