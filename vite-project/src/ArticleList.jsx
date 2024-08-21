@@ -32,10 +32,17 @@ const ArticleList = ({ theme }) => {
       </div>
       <div className="card">
         {articles.map((article) => (
-          <div className={`card-body ${theme}`} key={article.id}>
-            <h2 className="card-title">{article.title}</h2>
-            <p className="card-text">{article.summary}</p>
-          </div>
+          <a
+            href={article.link} 
+            className={`card ${theme}`} 
+            key={article.id}
+            target="_blank" // new tab
+          >
+            <div className={`card-body ${theme}`} key={article.id}>
+              <h2 className="card-title">{article.title}</h2>
+              <p className="card-text">{article.summary}</p>
+            </div>
+          </a>
         ))}
       </div>
     </div>
