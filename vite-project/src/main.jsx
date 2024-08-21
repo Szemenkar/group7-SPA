@@ -11,12 +11,12 @@ createRoot(document.getElementById('root')).render(
   </StrictMode>,
 );
 
-const Main = () => {
+function Main({ theme }) {
   return (
     <div>
-        <ArticleList/>
+      <ArticleList theme={theme} />
     </div>
   );
-};
+}
 
 export default Main;

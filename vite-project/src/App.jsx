@@ -1,19 +1,19 @@
 import React, { useState, useEffect } from 'react';
-import './App.css';
-import Main from './main'; // Import Main component
+import './App.css'; 
+import Main from './main';
 
 function App() {
   const [theme, setTheme] = useState(() => localStorage.getItem('theme') || 'light');
+  const [darkmodestatus, setDarkmodestatus] = useState(() => theme === 'light' ? 'OFF' : 'ON');
 
   useEffect(() => {
-    // Apply the theme to the body class
     document.body.className = theme;
 
-    // Save the current theme to localStorage
     localStorage.setItem('theme', theme);
+    setDarkmodestatus(theme === 'light' ? 'OFF' : 'ON');
   }, [theme]);
 
-  // Function to toggle between light and dark themes
+  //toggle between light and dark themes
   const toggleTheme = () => {
     setTheme((prevTheme) => (prevTheme === 'light' ? 'dark' : 'light'));
   };
@@ -21,10 +21,16 @@ function App() {
   return (
     <div className="container">
       <h1>Group 7</h1>
-      <button onClick={toggleTheme}>
-        Toggle to {theme === 'light' ? 'Dark' : 'Light'} Mode
-      </button>
-      <Main />
+      <div class="switch-container">
+      <div class="top-right"></div>
+      <label className="switch">
+        <input type="checkbox" onChange={toggleTheme} checked={theme === 'dark'} />
+        <span className="slider"></span>
+      </label>
+      <span className="dark-mode-text">Dark mode {darkmodestatus}</span>
+      </div>
+
+      <Main theme={theme} />
     </div>
   );
 }
