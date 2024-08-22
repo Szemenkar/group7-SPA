@@ -4,20 +4,17 @@ const mysql = require("mysql2");
 const app = express();
 const port = 3000;
 
-
 app.use(cors());
 app.use(express.json());
 
 
+//Change following to right information
 const db = mysql.createConnection({
     host: "localhost",
     user: "root",
     password: "Password!",
     database: "newssumdb",
 });
-
-
-
 
 
 
