@@ -25,7 +25,6 @@ function App() {
 
   return (
     <div className="container">
-      <h1>Group 7</h1>
       <div className="switch-container">
         <div className="top-right"></div>
         <label className="switch">
