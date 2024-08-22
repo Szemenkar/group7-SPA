@@ -13,13 +13,13 @@
   padding: 10px 20px;
 }
 
-.navbar-brand {
+.logobar-brand {
   display: flex;
   justify-content: center;
   flex-grow: 1;
 }
 
-.navbar-brand img {
+.logobar-brand img {
   width: 55px;
 }
 

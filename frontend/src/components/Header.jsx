@@ -6,10 +6,10 @@ import '../components/Header.css';
 const Header = () => {
   return (
     <header>
-      <nav className="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+      <nav className="logobar">
         <div className="container-fluid">
           <ul className="navbar-nav flex-grow-1">
-            <a className="navbar-brand" href="/"><img src={logo} alt="Group7" width="55" /></a>
+            <a className="logobar-brand" href="/"><img src={logo} alt="Group7" width="55" /></a>
           </ul>
           <li className="nav-item">
             <Link className="nav-link text-dark" to="/">Home | </Link>
