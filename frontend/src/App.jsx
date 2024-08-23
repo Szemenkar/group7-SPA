@@ -35,9 +35,9 @@ function App() {
       </div>
 
       <Router>
-        <Header />
+        <Header theme={theme}/>
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Home theme={theme} />} /> {/* Pass theme to Home */}
           <Route path="/privacy" element={<Privacy />} />
         </Routes>
       </Router>
@@ -45,10 +45,10 @@ function App() {
   );
 }
 
-const Home = () => (
+const Home = ({theme}) => (
   <>
     <Navbar />
-    <ArticleList />
+    <ArticleList theme={theme}/>
   </>
 );
 
