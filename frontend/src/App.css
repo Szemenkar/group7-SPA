@@ -32,7 +32,7 @@ body.dark {
 }
 
 h1 {
-  color: #000000;
+  color: white;
 }
 
 body.dark h1 {
@@ -66,9 +66,9 @@ body.dark h1 {
 }
 
 .card-body.dark {
-  color: white;
-  background-color: transparent;
-  border: 0.8px solid rgba(247, 57, 162, 1);
+  color: white !important;
+  background-color: transparent !important;
+  border: 0.8px solid rgba(247, 57, 162, 1) !important;
 }
 
 .card-body.light:hover {
@@ -78,7 +78,7 @@ body.dark h1 {
 
 .card-body.dark:hover {
   transform: scale(1.02);
-  background-color: rgba(247, 57, 162, 0.15);
+  background-color: rgba(247, 57, 162, 0.2) !important;
 }
 
 /* Dark mode switch */
