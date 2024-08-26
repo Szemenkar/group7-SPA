@@ -2,7 +2,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 110px;
+  margin-top: 25px;
+  margin-bottom: 60px;
 }
 
 .menu {
@@ -23,4 +24,20 @@
   margin: 0 8px;
   display: flex;
   justify-content: center;
+}
+
+.menu-list li:hover {
+  margin: 0 8px;
+  text-decoration: underline;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu.dark .menu-list li:hover {
+  margin: 0 8px;
+  color: #f739a2 !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

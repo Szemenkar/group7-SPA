@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import '../components/Filterbar.css';
 
-const Navbar = () => {
+const Navbar = ({ theme }) => {
   const [prevScrollPos, setPrevScrollPos] = useState(window.scrollY);
   const [menuStyle, setMenuStyle] = useState({});
   const isIndexPage = window.location.pathname === '/';
@@ -31,7 +31,7 @@ const Navbar = () => {
       } else {
         setMenuStyle({
           position: 'fixed',
-          top: `${headerHeight}px`,
+          top: `${headerHeight + 40}px`,
           opacity: '1',
           background: 'transparent',
           marginTop: '20px',
@@ -58,7 +58,7 @@ const Navbar = () => {
     <div>
       {isIndexPage && (
         <div className="menu-wrapper">
-          <div className="menu" style={menuStyle}>
+          <div className={`menu ${theme}`} style={menuStyle}>
             <ul className="menu-list">
               <li>Ekonomi</li>
               <li>Hälsa</li>

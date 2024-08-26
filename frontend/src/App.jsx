@@ -5,7 +5,6 @@ import Privacy from "./components/Privacy";
 import Header from "./components/Header";
 import Navbar from './components/Filterbar';
 import ArticleList from './components/ArticleList';
-import Main from './main';
 
 function App() {
   const [theme, setTheme] = useState(() => localStorage.getItem('theme') || 'light');
@@ -35,20 +34,20 @@ function App() {
       </div>
 
       <Router>
-        <Header />
+        <Header theme={theme}/>
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/privacy" element={<Privacy />} />
+          <Route path="/" element={<Home theme={theme} />} /> {/* Pass theme to Home */}
+          <Route path="/privacy" element={<Privacy theme={theme}/>} />
         </Routes>
       </Router>
     </div>
   );
 }
 
-const Home = () => (
+const Home = ({theme}) => (
   <>
-    <Navbar />
-    <ArticleList />
+    <Navbar theme={theme}/>
+    <ArticleList theme={theme}/>
   </>
 );
 

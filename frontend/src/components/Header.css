@@ -4,13 +4,14 @@
 
 .menu-nav {
   list-style-type: none;
+  margin-bottom: 20px;
+  margin-top: 20 px;
 }
 
 .navbar {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 10px 20px;
 }
 
 .logobar-brand {
@@ -20,7 +21,8 @@
 }
 
 .logobar-brand img {
-  width: 55px;
+  width: 80px;
+  margin-bottom: 20px;
 }
 
 .navbar-nav {
@@ -28,16 +30,20 @@
   align-items: center;
   list-style: none;
   padding: 0;
-  margin: 0;
 }
-
 
 .nav-link {
-  color: #333;
+  color: white;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: normal;
 }
 
-.nav-link:hover {
-  color: #f739a2;
+.nav-link.light:hover {
+  font-weight: bold !important;
+  color: white !important;
+}
+
+.nav-link.dark:hover {
+  color: #f739a2 !important;
+  font-weight: bold !important;
 }
