@@ -9,7 +9,9 @@ const Header = ({theme}) => {
       <nav className="logobar">
         <div className="container-fluid">
           <ul className="navbar-nav flex-grow-1">
-            <a className="logobar-brand" href="/"><img src={logo} alt="Group7" width="55" /></a>
+            <Link className="logobar-brand" to="/">
+              <img src={logo} alt="Group7" width="55" />
+            </Link>
           </ul>
           <li className={`nav-item ${theme}`}>
             <Link className={`nav-link ${theme}`} to="/">HOME | </Link>
