@@ -13,7 +13,7 @@ const Header = ({theme}) => {
           </ul>
           <li className={`nav-item ${theme}`}>
             <Link className={`nav-link ${theme}`} to="/">HOME | </Link>
-            <Link className={`nav-link ${theme}`} to="/">PRIVACY</Link>
+            <Link className={`nav-link ${theme}`} to="/privacy">PRIVACY</Link>
           </li>
         </div>
       </nav>
